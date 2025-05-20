@@ -8,7 +8,7 @@ import {
   IconButton,
   Drawer,
   List,
-  ListItem,
+  ListItem as MuiListItem,
   ListItemText,
   Box,
   Container,
@@ -16,6 +16,9 @@ import {
   useMediaQuery
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+
+// Fix for the ListItem component with newer MUI versions
+const ListItem = MuiListItem as any;
 
 const Navigation: React.FC = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
