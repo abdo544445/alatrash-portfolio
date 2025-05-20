@@ -6,7 +6,7 @@ interface AnimatedElementProps {
   variants?: Variants;
   initial?: boolean | VariantLabels | TargetAndTransition;
   animate?: boolean | VariantLabels | TargetAndTransition;
-  exit?: boolean | VariantLabels | TargetAndTransition;
+  exit?: VariantLabels | TargetAndTransition | undefined;
   transition?: object;
   className?: string;
 }
