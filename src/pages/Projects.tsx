@@ -1,6 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Typography, Container, Grid, Box, Card, CardContent, CardMedia, CardActionArea } from '@mui/material';
+import { Typography, Container as MuiContainer, Box, Card as MuiCard, CardContent, CardMedia, CardActionArea } from '@mui/material';
+import { Grid } from '../components/ui/MuiFixedComponents';
+
+// Use type-fixed container
+const Container = MuiContainer as any;
+const Card = MuiCard as any;
 
 // Sample project data - in a real app this would come from a database
 const projectsData = [

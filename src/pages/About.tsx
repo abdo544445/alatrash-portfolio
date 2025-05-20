@@ -1,9 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Typography, Container, Box, Grid, Paper, Avatar } from '@mui/material';
+import { Typography, Container as MuiContainer, Box, Paper as MuiPaper, Avatar } from '@mui/material';
+import { Grid } from '../components/ui/MuiFixedComponents';
 import CodeIcon from '@mui/icons-material/Code';
 import DesignServicesIcon from '@mui/icons-material/DesignServices';
 import DevicesIcon from '@mui/icons-material/Devices';
+
+// Use MUI components directly or with type fixes
+const Paper = MuiPaper as any;
+const Container = MuiContainer as any;
 
 const About: React.FC = () => {
   const skills = [

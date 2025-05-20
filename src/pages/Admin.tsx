@@ -2,12 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import {
   Typography,
-  Container,
+  Container as MuiContainer,
   Box,
   Button,
   TextField,
-  Grid,
-  Paper,
+  Paper as MuiPaper,
   Table,
   TableBody,
   TableCell,
@@ -27,6 +26,7 @@ import {
   OutlinedInput,
   SelectChangeEvent
 } from '@mui/material';
+import { Grid } from '../components/ui/MuiFixedComponents';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import AddIcon from '@mui/icons-material/Add';
@@ -156,7 +156,7 @@ const Admin: React.FC = () => {
   };
 
   return (
-    <Container maxWidth="lg" sx={{ py: 8 }}>
+    <MuiContainer maxWidth="lg" sx={{ py: 8 }}>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -177,7 +177,7 @@ const Admin: React.FC = () => {
         </Box>
       </motion.div>
 
-      <Paper elevation={3} sx={{ p: 3 }}>
+      <MuiPaper elevation={3} sx={{ p: 3 }}>
         <Typography variant="h5" component="h2" gutterBottom>
           Manage Projects
         </Typography>
@@ -217,7 +217,7 @@ const Admin: React.FC = () => {
             </TableBody>
           </Table>
         </TableContainer>
-      </Paper>
+      </MuiPaper>
 
       {/* Add/Edit Project Dialog */}
       <Dialog open={open} onClose={handleClose} maxWidth="md" fullWidth>
@@ -300,7 +300,7 @@ const Admin: React.FC = () => {
           </Button>
         </DialogActions>
       </Dialog>
-    </Container>
+    </MuiContainer>
   );
 };
 

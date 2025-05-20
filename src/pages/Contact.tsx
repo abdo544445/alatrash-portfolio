@@ -2,18 +2,22 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Typography, 
-  Container, 
+  Container as MuiContainer, 
   Box, 
   TextField, 
   Button, 
-  Grid, 
-  Paper,
+  Paper as MuiPaper,
   Snackbar,
   Alert
 } from '@mui/material';
+import { Grid } from '../components/ui/MuiFixedComponents';
 import EmailIcon from '@mui/icons-material/Email';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PhoneIcon from '@mui/icons-material/Phone';
+
+// Use fixed MUI components
+const Container = MuiContainer as any;
+const Paper = MuiPaper as any;
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({

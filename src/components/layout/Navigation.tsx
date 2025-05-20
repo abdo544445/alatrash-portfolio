@@ -8,17 +8,17 @@ import {
   IconButton,
   Drawer,
   List,
-  ListItem as MuiListItem,
   ListItemText,
   Box,
-  Container,
+  Container as MuiContainer,
   useTheme,
   useMediaQuery
 } from '@mui/material';
+import { ListItem } from '../ui/MuiFixedComponents';
 import MenuIcon from '@mui/icons-material/Menu';
 
-// Fix for the ListItem component with newer MUI versions
-const ListItem = MuiListItem as any;
+// Use fixed MUI components
+const Container = MuiContainer as any;
 
 const Navigation: React.FC = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
