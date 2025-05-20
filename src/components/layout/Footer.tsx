@@ -1,8 +1,11 @@
 import React from 'react';
-import { Box, Container, Typography, Link, Grid, IconButton } from '@mui/material';
+import { Box, Container, Typography, Link, Grid as MuiGrid, IconButton } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
+
+// Fix for the Grid component with newer MUI versions
+const Grid = MuiGrid as any;
 
 const Footer: React.FC = () => {
   return (
