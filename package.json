@@ -2,6 +2,7 @@
   "name": "alatrash-portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://abdo544445.github.io/alatrash-portfolio",
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
@@ -17,6 +18,7 @@
     "@types/react-dom": "^19.1.5",
     "firebase": "^11.7.3",
     "framer-motion": "^12.12.1",
+    "gh-pages": "^6.3.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.6.0",
@@ -26,6 +28,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
