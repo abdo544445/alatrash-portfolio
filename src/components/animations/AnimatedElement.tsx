@@ -1,12 +1,12 @@
 import React from 'react';
-import { motion, Variants } from 'framer-motion';
+import { motion, Variants, TargetAndTransition, VariantLabels } from 'framer-motion';
 
 interface AnimatedElementProps {
   children: React.ReactNode;
   variants?: Variants;
-  initial?: string | object;
-  animate?: string | object;
-  exit?: string | object;
+  initial?: boolean | VariantLabels | TargetAndTransition;
+  animate?: boolean | VariantLabels | TargetAndTransition;
+  exit?: boolean | VariantLabels | TargetAndTransition;
   transition?: object;
   className?: string;
 }
