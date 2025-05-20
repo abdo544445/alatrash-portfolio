@@ -2,7 +2,7 @@
   "name": "alatrash-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://abdo544445.github.io/alatrash-portfolio",
+  "homepage": "https://alatrash.me",
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
